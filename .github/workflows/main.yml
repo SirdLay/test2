@@ -32,8 +32,6 @@ jobs:
           -H 'Sec-GPC: 1' \
           --data-binary @data.txt \
           --output Guide2.xml
-        env:
-          CURL_CA_BUNDLE: ""
 
       - name: Upload Guide to Artifacts
         uses: actions/upload-artifact@v2
