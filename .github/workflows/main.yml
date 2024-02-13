@@ -33,8 +33,11 @@ jobs:
           --data-binary @data.txt \
           --output Guide2.xml
 
-      - name: Upload Guide to Artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: Guide2.xml
-          path: Guide2.xml
+      # New step to commit and push Guide2.xml
+      - name: Commit and Push Guide2.xml
+        run: |
+          git config --global user.email "mailmasterdlay@gmail.com"
+          git config --global user.name "SirdLay"
+          git add Guide2.xml
+          git commit -m "Add generated Guide2.xml"
+          git push
