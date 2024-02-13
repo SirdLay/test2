@@ -50,7 +50,9 @@ jobs:
           -H 'Sec-Fetch-Site: same-origin' \
           -H 'Sec-Fetch-User: ?1' \
           -H 'Sec-GPC: 1' \
-          --data-binary @data.txt \
+          -F 'tempconfig=@tempest.config.xml' \
+          -F 'engine=Generate' \
+          -F 'dlxm=on' \
           --output Guide3.xml
 
       - name: Commit and Push Guide2.xml
