@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Tempest EPG Generator (made by Kvanc) -->
+<configuration>
+  <filename>Guide.xml</filename>
+  <user-agent/>
+  <logger>off</logger>
+  <retry>2</retry>
+  <time-out>5</time-out>
+  <timespan>0</timespan>
+  <proxy/>
+  <index-only>off</index-only>
+  <fusion>off</fusion>
+  <fusion-level/>
+  <time-converter/>
+  <delay channel="" index="" detail=""/>
+  <channel-lister>off</channel-lister>
+  <inverter>off</inverter>
+  <inverter-filename/>
+  <inverter-path/>
+  <logname/>
+  <channel site="[ENC][EX]tataplay.com_0" site_id="292||11246-j9iw5g74-v3/imageContent-11246-j9iw5g74-m3" xmltv_id="Asianet HD">Asianet HD</channel>
+  <channel site="[ENC][EX]tataplay.com_0" site_id="294||11254-j9ixwlcg-v1/imageContent-11254-j9ixwlcg-m1" xmltv_id="Asianet Plus">Asianet Plus</channel>
+  <channel site="[ENC][EX]tataplay.com_0" site_id="1173" xmltv_id="Asianet Movies HD">Asianet Movies HD</channel>
+  <channel site="[ENC][EX]tataplay.com_0" site_id="532||12020-j9ntf12w-v1/imageContent-12020-j9ntf12w-m1" xmltv_id="Asianet News">Asianet News</channel>
+  <channel site="[ENC][EX]tataplay.com_0" site_id="230||1005-j5nfiy9c-v1/imageContent-1005-j5nfiy9c-m1" xmltv_id="Surya TV">Surya TV</channel>
+  <channel site="[ENC][EX]tataplay.com_0" site_id="229||1008-j5nfqjeo-v1/imageContent-1008-j5nfqjeo-m1" xmltv_id="Surya Movies">Surya Movies</channel>
+  <channel site="[ENC][EX]tataplay.com_0" site_id="481||11844-j9l1id54-v1/imageContent-11844-j9l1id54-m1" xmltv_id="Surya Comedy">Surya Comedy</channel>
+  <channel site="[ENC][EX]tataplay.com_0" site_id="483||11850-j9l1nscw-v1/imageContent-11850-j9l1nscw-m1" xmltv_id="Surya Music">Surya Music</channel>
+  <channel site="[ENC][EX]tataplay.com_0" site_id="1124" xmltv_id="Reporter TV">Reporter TV</channel>
+  <channel site="[ENC]jiotv_0" site_id="710||Kairali_TV.png" xmltv_id="Kairali TV">Kairali TV</channel>
+  <channel site="[ENC]jiotv_0" site_id="725||Kairali_People_TV.png" xmltv_id="Kairali News">Kairali News</channel>
+  <channel site="[ENC]jiotv_0" site_id="731||Kairali_WE_TV.png" xmltv_id="Kairali WE TV">Kairali WE TV</channel>
+  <channel site="[ENC]jiotv_0" site_id="699||DD_Malayalam.png" xmltv_id="DD Malayalam">DD Malayalam</channel>
+  <channel site="[ENC]jiotv_0" site_id="563||Kaumudy_TV.png" xmltv_id="Kaumudy TV">Kaumudy TV</channel>
+  <channel site="[ENC]jiotv_0" site_id="634||Flower_TV.png" xmltv_id="Flower TV">Flower TV</channel>
+  <channel site="[ENC]jiotv_0" site_id="465||Jaihind_tv.png" xmltv_id="Jaihind tv">Jaihind tv</channel>
+  <channel site="[ENC]jiotv_0" site_id="810||Janam_TV.png" xmltv_id="Janam TV">Janam TV</channel>
+  <channel site="[ENC]jiotv_0" site_id="786||Kappa_TV.png" xmltv_id="Kappa TV">Kappa TV</channel>
+  <channel site="[ENC]jiotv_0" site_id="556||Kochu_TV.png" xmltv_id="Kochu TV">Kochu TV</channel>
+  <channel site="[ENC]jiotv_0" site_id="910||Media_One_TV.png" xmltv_id="Media One TV">Media One TV</channel>
+  <channel site="[ENC]jiotv_0" site_id="844||Mazavali_Manorama_HD.png" xmltv_id="Mazavali Manorama HD">Mazavali Manorama HD</channel>
+  <channel site="[ENC]jiotv_0" site_id="662||Manorama_News.png" xmltv_id="Manorama News">Manorama News</channel>
+  <channel site="[ENC]jiotv_0" site_id="780||Mathrubhumi_News.png" xmltv_id="Mathrubhumi News">Mathrubhumi News</channel>
+  <channel site="[ENC]jiotv_0" site_id="965||News_18_Kerala.png" xmltv_id="News 18 Kerala">News 18 Kerala</channel>
+  <channel site="[ENC]jiotv_0" site_id="739||Raj_Music_Malayalam.png" xmltv_id="Raj Music Malayalam">Raj Music Malayalam</channel>
+  <channel site="[ENC]jiotv_0" site_id="650||Raj_News_Malayalam.png" xmltv_id="Raj News Malayalam">Raj News Malayalam</channel>
+  <channel site="[ENC]jiotv_0" site_id="1666||Safari_TV.png" xmltv_id="Safari TV">Safari TV</channel>
+  <channel site="[ENC]jiotv_0" site_id="1641||Zee_Keralam_HD.png" xmltv_id="Zee Keralam HD">Zee Keralam HD</channel>
+  <channel site="[ENC]jiotv_0" site_id="606||Shalom.png" xmltv_id="Shalom">Shalom</channel>
+  <channel site="[ENC]jiotv_0" site_id="723||Amrita_TV.png" xmltv_id="Amrita TV">Amrita TV</channel>
+  <channel site="[ENC]jiotv_0" site_id="1984||Sports18_1_HD.png" xmltv_id="Sports18 1 HD">Sports18 1 HD</channel>
+  <channel site="[ENC][EX]dishtv.in[en]_0" site_id="10000000005870000" xmltv_id="Star Sports 2 Hd">Star Sports 2 Hd</channel>
+  <channel site="[ENC][EX]dishtv.in[en]_0" site_id="10000000047500000" xmltv_id="Star Sports Select 1 Hd">Star Sports Select 1 Hd</channel>
+  <channel site="[ENC][EX]dishtv.in[en]_0" site_id="10000000047510000" xmltv_id="Star Sports Select 2 Hd">Star Sports Select 2 Hd</channel>
+  <channel site="[ENC][EX]dishtv.in[en]_0" site_id="10000000061080000" xmltv_id="Star Sports 3">Star Sports 3</channel>
+  <channel site="[ENC][EX]dishtv.in[en]_0" site_id="10000000053100000" xmltv_id="Star Sports First">Star Sports First</channel>
+  <channel site="[ENC][EX]tataplay.com_0" site_id="78||8301-j7hc0820-v1/imageContent-8301-j7hc0820-m1" xmltv_id="Star Sports 1 HD">Star Sports 1 HD</channel>
+  <channel site="[ENC][EX]tataplay.com_0" site_id="1067" xmltv_id="Star Sports 1 Tamil HD">Star Sports 1 Tamil HD</channel>
+  <channel site="[ENC][EX]tataplay.com_0" site_id="81||261-j5fz9bvk-v4/imageContent-261-j5fz9bvk-m4" xmltv_id="SONY SPORTS TEN 1 HD">SONY SPORTS TEN 1 HD</channel>
+  <channel site="[ENC][EX]tataplay.com_0" site_id="462||11784-j9kylfd4-v2/imageContent-11784-j9kylfd4-m3" xmltv_id="SONY SPORTS TEN 2 HD">SONY SPORTS TEN 2 HD</channel>
+  <channel site="[ENC][EX]tataplay.com_0" site_id="464||11787-j9kynnm0-v3/imageContent-11787-j9kynnm0-m3" xmltv_id="SONY SPORTS TEN 3 HD">SONY SPORTS TEN 3 HD</channel>
+  <channel site="[ENC]jiotv_0" site_id="204||DD_Sports.png" xmltv_id="DD Sports">DD Sports</channel>
+</configuration>
