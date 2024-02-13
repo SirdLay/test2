@@ -1,0 +1,42 @@
+name: Generate EPG Guide
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generate-and-save-epg:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Generate EPG Guide
+        run: |
+          curl -X POST https://epggen.site/tempest.php \
+          -H 'Host: epggen.site' \
+          -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:110.0) Gecko/20100101 Firefox/110.0' \
+          -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8' \
+          -H 'Accept-Language: en-US,en;q=0.5' \
+          -H 'Accept-Encoding: gzip, deflate, br' \
+          -H 'Content-Type: multipart/form-data; boundary=---------------------------272672977239304055591978080140' \
+          -H 'Origin: https://epggen.site' \
+          -H 'DNT: 1' \
+          -H 'Connection: keep-alive' \
+          -H 'Referer: https://epggen.site/tempest.php' \
+          -H 'Cookie: PHPSESSID=cb5ldg1cjr2pmlg43vupbogqe9' \
+          -H 'Upgrade-Insecure-Requests: 1' \
+          -H 'Sec-Fetch-Dest: document' \
+          -H 'Sec-Fetch-Mode: navigate' \
+          -H 'Sec-Fetch-Site: same-origin' \
+          -H 'Sec-Fetch-User: ?1' \
+          -H 'Sec-GPC: 1' \
+          --data-binary @data.txt \
+          --output Guide2.xml
+        env:
+          CURL_CA_BUNDLE: ""
+
+      - name: Upload Guide to Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: Guide2.xml
+          path: Guide2.xml
