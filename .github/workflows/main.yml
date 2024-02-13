@@ -55,7 +55,7 @@ jobs:
 
       - name: Commit and Push Guide2.xml
         run: |
-          git config --global user.email "ajthealpha07@gmail.com"
+          git config --global user.email "ajthealpha007@gmail.com"
           git config --global user.name "SirdLay"
           git add Guide2.xml
           git commit -m "Add generated Guide2.xml using cookies"
