@@ -1,4 +1,4 @@
-name: Generate EPG Guide
+name: Generate EPG Guide with Cookie
 
 on:
   workflow_dispatch:
@@ -10,20 +10,40 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Generate EPG Guide
+      - name: Make GET request to obtain cookies
+        id: get_cookies
         run: |
-          curl -X POST https://epggen.site/tempest.php \
+          response=$(curl -i -s 'https://epggen.site/tempest.php' \
+            -H 'Host: epggen.site' \
+            -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:110.0) Gecko/20100101 Firefox/110.0' \
+            -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8' \
+            -H 'Accept-Language: en-US,en;q=0.5' \
+            -H 'Accept-Encoding: gzip, deflate, br' \
+            -H 'DNT: 1' \
+            -H 'Connection: keep-alive' \
+            -H 'Referer: https://epggen.site/tempest.php' \
+            -H 'Upgrade-Insecure-Requests: 1' \
+            -H 'Sec-Fetch-Dest: document' \
+            -H 'Sec-Fetch-Mode: navigate' \
+            -H 'Sec-Fetch-Site: same-origin' \
+            -H 'Sec-Fetch-User: ?1' \
+            -H 'Sec-GPC: 1')
+          cookie=$(echo "$response" | grep -i Set-Cookie | head -n 1 | cut -d ' ' -f2)
+          echo "::set-output name=cookie::$cookie"
+
+      - name: Generate EPG Guide using cookies
+        run: |
+          curl -X POST 'https://epggen.site/tempest.php' \
           -H 'Host: epggen.site' \
           -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:110.0) Gecko/20100101 Firefox/110.0' \
           -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8' \
           -H 'Accept-Language: en-US,en;q=0.5' \
           -H 'Accept-Encoding: gzip, deflate, br' \
           -H 'Content-Type: multipart/form-data; boundary=---------------------------272672977239304055591978080140' \
-          -H 'Origin: https://epggen.site' \
+          -H "Cookie: ${{ steps.get_cookies.outputs.cookie }}" \
           -H 'DNT: 1' \
           -H 'Connection: keep-alive' \
           -H 'Referer: https://epggen.site/tempest.php' \
-          -H 'Cookie: PHPSESSID=cb5ldg1cjr2pmlg43vupbogqe9' \
           -H 'Upgrade-Insecure-Requests: 1' \
           -H 'Sec-Fetch-Dest: document' \
           -H 'Sec-Fetch-Mode: navigate' \
@@ -33,11 +53,10 @@ jobs:
           --data-binary @data.txt \
           --output Guide2.xml
 
-      # New step to commit and push Guide2.xml
       - name: Commit and Push Guide2.xml
         run: |
-          git config --global user.email "ajthealpha007@gmail.com"
+          git config --global user.email "ajthealpha07@gmail.com"
           git config --global user.name "SirdLay"
           git add Guide2.xml
-          git commit -m "Add generated Guide2.xml"
+          git commit -m "Add generated Guide2.xml using cookies"
           git push
